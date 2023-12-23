@@ -168,7 +168,7 @@ section{
 .stroke{ 
   font-size: 9vw;
   -webkit-text-fill-color: transparent;
-  -webkit-text-stroke-width: 1vw;
+  -webkit-text-stroke-width: .2vw;
 }
 
 
