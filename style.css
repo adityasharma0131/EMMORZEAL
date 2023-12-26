@@ -153,6 +153,8 @@ section{
   text-align: center;
   display: flex;
   flex-direction: column;
+  position: relative;
+  z-index: 1;
  
 }
 
@@ -171,14 +173,245 @@ section{
   -webkit-text-stroke-width: .2vw;
 }
 
+video{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity:0.8;
+}
+
+
+
+
+/* .media ul {
+  display: flex;            this is the social link that is not working!!!!!!!!!!!!
+  flex-direction: column;
+  position: relative;
+  gap: 4rem;
+  z-index: 1;
+  margin: 15px;
+  
+}
+
+.media ul li a{
+  color: var(--red);
+  font-size: 3vh;
+  margin: 24px 0;
+  z-index: 1;
+} */
 
 
 
 
 
 
+.bgbox{
+  position:relative;
+  color: white;
+  padding: 2rem;
+  margin:0rem 2.5rem 2.5rem 2.5rem;
+  width: auto;
+  height: auto;
+  border-radius: 14px;
+  background: rgba( 31, 31, 31, 0.5 );
+  backdrop-filter: blur( 6px );
+  -webkit-backdrop-filter: blur( 6px );
+
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column  ;
+
+}
 
 
+
+
+
+
+.stroke1{
+  color: var(--red);
+  -webkit-text-fill-color: var(--red);
+  -webkit-text-stroke-width: .1100vw;
+} 
+
+
+.progress-bar{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 5rem;
+  margin-top: 13px;
+}
+
+
+
+
+
+.circular-progress1{
+  position: relative;
+  height: 200px;
+  width: 200px;
+  background-color: var(--red);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+
+}
+
+.circular-progress1:before{
+  content: "";
+  position: absolute;
+  height: 84%;
+  width: 84%;
+  background-color: var(--dark);
+  border-radius: 50%;
+
+}
+
+.value-container1{
+  position: absolute;
+  font-size: 35px;
+  color: white;
+}
+
+/* 
+dfsdfsd */
+
+.circular-progress2{
+  position: relative;
+  height: 200px;
+  width: 200px;
+  background-color: var(--red);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+
+}
+
+.circular-progress2:before{
+  content: "";
+  position: absolute;
+  height: 84%;
+  width: 84%;
+  background-color: var(--dark);
+  border-radius: 50%;
+
+}
+
+.value-container2{
+  position: absolute;
+  font-size: 35px;
+  color: white;
+}
+
+
+/* 
+dfsdfsd */
+
+.circular-progress3{
+  position: relative;
+  height: 200px;
+  width: 200px;
+  background-color: var(--red);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+
+}
+
+.circular-progress3:before{
+  content: "";
+  position: absolute;
+  height: 84%;
+  width: 84%;
+  background-color: var(--dark);
+  border-radius: 50%;
+
+}
+
+.value-container3{
+  position: absolute;
+  font-size: 35px;
+  color: white;
+}
+
+
+/* 
+dfsdfsd */
+
+.circular-progress4{
+  position: relative;
+  height: 200px;
+  width: 200px;
+  background-color: var(--red);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+
+}
+
+.circular-progress4:before{
+  content: "";
+  position: absolute;
+  height: 84%;
+  width: 84%;
+  background-color: var(--dark);
+  border-radius: 50%;
+
+}
+
+.value-container4{
+  position: absolute;
+  font-size: 35px;
+  color: white;
+}
+
+
+/* 
+dfsdfsd */
+
+.circular-progress5{
+  position: relative;
+  height: 200px;
+  width: 200px;
+  background-color: var(--red);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+
+}
+
+.circular-progress5:before{
+  content: "";
+  position: absolute;
+  height: 84%;
+  width: 84%;
+  background-color: var(--dark);
+  border-radius: 50%;
+
+}
+
+.value-container5{
+  position: absolute;
+  font-size: 35px;
+  color: white;
+}
 
 
 
@@ -195,10 +428,10 @@ section{
   .nav__name {
     display: none;
   }
+  .progress-bar{
+    flex-direction: column;
+  }
  
-  
-  
-  
 }
 
 /* For medium devices */
@@ -208,6 +441,8 @@ section{
     column-gap: 3rem;
   }
   
+  
+ 
   
   
   
@@ -242,6 +477,9 @@ section{
 
   
   
+
+  
+  
   
  
 
@@ -269,6 +507,11 @@ section{
     margin-right: auto;
   }
 
+  
+  
+
+  
+
 }
 
 
@@ -285,5 +528,9 @@ section{
     align-content: center;
     border-radius: 1.25rem 1.25rem 0 0;
     transition: .4s;
+  }
+
+  .progress-bar{
+    flex-direction: column;
   }
 }
