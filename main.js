@@ -1,6 +1,6 @@
 let progressValues = [0, 0, 0, 0, 0]; // Array to store progress values for each progress bar
 let progressEndValues = [57, 21, 37, 47, 22]; // Array to store end values for each progress bar
-let speed = 10;
+let speed = 22;
 
 for (let i = 1; i <= 5; i++) {
   let progressBar = document.querySelector(`.circular-progress${i}`);
