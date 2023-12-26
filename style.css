@@ -95,6 +95,7 @@ a {
 .nav__logo {
   color: var(--red);
   font-weight: 600;
+  padding: 5px;
 }
 
 
@@ -109,6 +110,7 @@ a {
   row-gap: 4px;
   color: var(--red);
   font-weight: 600;
+  padding: 5px;
 }
 
 .nav__list {
@@ -124,12 +126,30 @@ a {
   font-size: 1.5rem;
 }
 
+
+.nav__link:hover {
+  background: var(--red);
+  color: var(--dark);
+  box-shadow: 0 5px 15px var(--red);
+  border-radius: 4px;
+  
+}
+
+
+.nav__logo:hover{
+  background: var(--red);
+  color: var(--dark);
+  box-shadow: 0 5px 15px var(--red);
+  border-radius: 4px;
+
+}
+
 /*Active link*/
-.active-link {
+/* .active-link {
   position: relative;
   color: var(--red);
   transition: .3s;
-}
+} */
 
 /* Minimalist design, active link */
 /* .active-link::before{
@@ -166,11 +186,14 @@ section{
 }
 .mainheader{
   font-size: 9vw;
+
 }
 .stroke{ 
   font-size: 9vw;
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke-width: .2vw;
+  
+  
 }
 
 video{
@@ -237,6 +260,11 @@ video{
   color: var(--red);
   -webkit-text-fill-color: var(--red);
   -webkit-text-stroke-width: .1100vw;
+
+  text-shadow: 0 5px 15px var(--red);
+
+  
+
 } 
 
 
@@ -247,8 +275,9 @@ video{
   flex-direction: row;
   gap: 5rem;
   margin-top: 13px;
-}
+  
 
+}
 
 
 
@@ -258,6 +287,8 @@ video{
   height: 200px;
   width: 200px;
   background-color: var(--red);
+    
+
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -421,6 +452,25 @@ dfsdfsd */
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*=============== MEDIA QUERIES ===============*/
 /* For small devices */
 /* Remove if you choose, the minimalist design */
@@ -470,10 +520,7 @@ dfsdfsd */
     font-size: .938rem;
     /* display: block; */ /* Minimalist design, visible labels */
   }
-  .nav__link:hover {
-    color: var(--dark);
-    background-color: var(--red);
-  }
+  
 
   
   
