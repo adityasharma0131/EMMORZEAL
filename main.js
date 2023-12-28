@@ -1,6 +1,6 @@
 let progressValues = [0, 0, 0, 0, 0]; // Array to store progress values for each progress bar
 let progressEndValues = [57, 21, 37, 47, 22]; // Array to store end values for each progress bar
-let speed = 22;
+let speed = 55;
 
 for (let i = 1; i <= 5; i++) {
   let progressBar = document.querySelector(`.circular-progress${i}`);
@@ -23,3 +23,38 @@ for (let i = 1; i <= 5; i++) {
   // Update the progress value in the array for future use
   progressValues[i - 1] = progressValue;
 }
+
+
+
+
+const scrollers = document.querySelectorAll(".scroller");
+
+// If a user hasn't opted in for recuded motion, then we add the animation
+if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+  addAnimation();
+}
+
+function addAnimation() {
+  scrollers.forEach((scroller) => {
+    // add data-animated="true" to every `.scroller` on the page
+    scroller.setAttribute("data-animated", true);
+
+    // Make an array from the elements within `.scroller-inner`
+    const scrollerInner = scroller.querySelector(".scroller__inner");
+    const scrollerContent = Array.from(scrollerInner.children);
+
+    // For each item in the array, clone it
+    // add aria-hidden to it
+    // add it into the `.scroller-inner`
+    scrollerContent.forEach((item) => {
+      const duplicatedItem = item.cloneNode(true);
+      duplicatedItem.setAttribute("aria-hidden", true);
+      scrollerInner.appendChild(duplicatedItem);
+    });
+  });
+}
+
+
+
+
+
