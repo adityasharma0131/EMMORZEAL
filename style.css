@@ -286,11 +286,10 @@ video{
   align-items: center;
   justify-content: center;
   flex-direction: row;
-  gap: 5rem;
+  gap: 5vw;
   margin-top: 13px;
   flex-wrap: wrap;
   
-
 }
 
 
@@ -694,7 +693,6 @@ dfsdfsd */
   
   
   
-  
 
 
 
@@ -752,6 +750,7 @@ dfsdfsd */
   }
 
 
+
   
 
 }
@@ -774,6 +773,7 @@ dfsdfsd */
 
   .progress-bar{
     flex-direction: column;
+    
   }
 
   
