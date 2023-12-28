@@ -56,6 +56,19 @@ a {
 }
 
 
+::-webkit-scrollbar{
+  height: .5rem;
+  width: .5rem;
+}
+
+::-webkit-scrollbar-track{
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb{
+  background-color: var(--red);
+  border-radius: 1rem;
+}
 
 
 /*=============== REUSABLE CSS CLASSES ===============*/
@@ -451,6 +464,7 @@ dfsdfsd */
   gap: 1.5rem;
   flex-direction: row;
   align-items: center;
+  justify-content: center;
   flex-wrap: wrap;
 }
 
@@ -469,13 +483,16 @@ dfsdfsd */
 .temporary_text {
   font-weight: bold;
   font-size:3vh;
-  padding: 6px 12px;
+  padding: 15px 12px;
   color: #f8f8f8;
   
 }
-.temporary_text img{
+/* .temporary_text img{
+  width:300px;
+  height: 300px;
   object-fit: cover;
-}
+
+} */
 
 .card_title {
   font-weight: bold;
@@ -487,7 +504,7 @@ dfsdfsd */
   left: 0;
   bottom: 0;
     /* edit the width to fit card */
-      height:80%;
+    height:80%;
   width: 100%;
   padding: 20px;
   background: var(--red);
@@ -539,10 +556,100 @@ dfsdfsd */
 
 
 
+.members{
+  display: flex;
+  gap: 1.5rem;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.team-mem{
+  margin: 8px;
+}
+.team-mem img{
+  border-style:solid;
+  border-color: #131313;
+  width: 15rem;
+  height:15rem;
+  border-radius: 50%;
+  margin: 10px;
+}
+
+.memname{
+  text-align: center;
+  font-size: 2rem;
+  margin: 7px;
+}
+
+.memdesc{
+  text-align: center;
+  font-size: .9rem;
+  margin: 7px;
+  color: var(--red);
+}
 
 
+.scroller {
+  max-width: 90vw;
+}
 
+.scroller__inner {
+  padding-block: rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
 
+.scroller__inner img{
+  border-style:solid;
+  border-color: #131313;
+  width: 20rem;
+  height:20rem;
+  border-radius: 50%;
+  margin: 10px;
+}
+
+.scroller[data-animated="true"] {
+  overflow: hidden;
+  -webkit-mask: linear-gradient(
+    90deg,
+    transparent,
+    var(--dark) 20%,
+    var(--dark) 80%,
+    transparent
+  );
+  mask: linear-gradient(90deg, transparent, var(--dark) 20%, var(--dark) 80%, transparent);
+}
+
+.scroller[data-animated="true"] .scroller__inner {
+  width: max-content;
+  flex-wrap: nowrap;
+  animation: scroll var(--_animation-duration, 40s)
+    var(--_animation-direction, forwards) linear infinite;
+}
+
+.scroller[data-direction="right"] {
+  --_animation-direction: reverse;
+}
+
+.scroller[data-direction="left"] {
+  --_animation-direction: forwards;
+}
+
+.scroller[data-speed="fast"] {
+  --_animation-duration: 20s;
+}
+
+.scroller[data-speed="slow"] {
+  --_animation-duration: 60s;
+}
+
+@keyframes scroll {
+  to {
+    transform: translate(calc(-50% - 0.5rem));
+  }
+}
 
 
 
@@ -646,8 +753,6 @@ dfsdfsd */
     margin-right: auto;
   }
 
-  
-  
 
   
 
@@ -685,5 +790,8 @@ dfsdfsd */
 .card_description {
   font-size: 10px;
 }  
+.scroller {
+  max-width: 66vw;
+}
 
 }
