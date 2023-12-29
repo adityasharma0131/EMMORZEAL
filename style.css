@@ -875,3 +875,271 @@ ul {
 @media only screen and(max-width: 643px){
   
 }
+
+
+
+/* ###################################################################### */
+
+
+.dropdown{
+  min-width: 15em;
+  position: relative;
+  margin: 2em;
+}
+
+.dropdown *{
+  box-sizing: border-box;
+}
+
+.select{
+  background: #2a2f3b;
+   color:#fff;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   border: 2px #2a2f3b solid;
+   border-radius: 0.5em;
+   padding: 1em;
+   cursor: pointer;
+   transition: background 0.3s; 
+   width: 70vw;
+   height: auto;
+
+}
+
+.select-clicked{
+  border: 2px #cc0001 solid;
+  box-shadow: 0 0 0.8em #cc0001;
+
+}
+
+.select:hover{
+  background: #323741;
+}
+
+.caret{
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+
+  border-top: 6px solid #fff;
+  transition: 0.3s;
+}
+
+.caret-rotate{
+  transform: rotate(180deg);
+}
+
+
+.menu{
+  list-style: none;
+  padding: 0.2em 0.5em;
+  background: #323741;
+  border: 1px #363a43 solid;
+  box-shadow: 0 0.5em 1em rgba(0,0,0,0.2);
+  border-radius: 0.5em;
+  color: #9fa5b5;
+  position: relative;
+  top: 1em;
+  left: 50%;
+  width: 100%;
+  transform: translateX(-50%);
+  opacity: 0;
+  display: none;
+  transition: 0.2s;
+  z-index: 1;
+} 
+
+.menu li{
+  padding: 0.7em 0.5em;
+  margin: 0.3em 0;
+  border-radius: 0.5em;
+  cursor: pointer;
+}
+
+.menu li:hover{
+  background: #2a2d35;
+
+}
+
+
+.active{
+  background: #23242a;
+}
+
+.menu-open{
+  display: block;
+  opacity: 1;
+}
+
+
+.form__group {
+  position: relative;
+  padding: 20px 0 0;
+  width: 100%;
+  max-width: 180px;
+}
+
+.form__field {
+  font-family: inherit;
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid #9b9b9b;
+  outline: 0;
+  font-size: 17px;
+  color: #fff;
+  padding: 7px 0;
+  background: transparent;
+  transition: border-color 0.2s;
+  width: 60vw;
+  height: auto;
+}
+
+.form__field::placeholder {
+  color: transparent;
+}
+
+.form__field:placeholder-shown ~ .form__label {
+  font-size: 15px;
+  cursor: text;
+  top: 20px;
+}
+
+.form__label {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 1.5vh;
+  color: #9b9b9b;
+  pointer-events: none;
+}
+
+.form__field:focus {
+  padding-bottom: 6px;
+  font-weight: 700;
+  border-width: 3px;
+  border-image: linear-gradient(to right, #cc0001, #ff2525);
+  border-image-slice: 1;
+}
+
+.form__field:focus ~ .form__label {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 1.5vh;
+  color: #cc0001;
+  font-weight: 700;
+}
+
+/* reset input */
+.form__field:required, .form__field:invalid {
+  box-shadow: none;
+}
+.cars{
+  width: 60vw;
+  height: auto;
+  color: #9b9b9b;
+  background-color: transparent;
+  height: 5vh;
+  border-radius: 4px;
+  border-color: #9b9b9b;
+  border-width: 2px;
+}
+
+.cars option{
+  color: #9b9b9b;
+  background-color: transparent;
+  border-color: #9b9b9b;
+  border-width: 2px;
+}
+
+
+.menu li .cta{
+  display: flex;
+  margin-left: 25vw;
+
+}
+
+.cta {
+  display: flex;
+  padding: 11px 33px;
+  text-decoration: none;
+  font-size: 2.5vh;
+  color: white;
+  background: #cc0001;
+  transition: 1s;
+  box-shadow: 6px 6px 0 black;
+  transform: skewX(-15deg);
+  border: none;
+}
+
+.cta:focus {
+  outline: none;
+}
+
+.cta:hover {
+  transition: 0.5s;
+  box-shadow: 10px 10px 0 var(--dark);
+}
+
+.cta .second {
+  transition: 0.5s;
+  margin-right: 0px;
+}
+
+.cta:hover  .second {
+  transition: 0.5s;
+
+}
+
+.span {
+  transform: skewX(15deg)
+}
+
+.second {
+  width: 20px;
+  margin-left: 30px;
+  position: relative;
+  top: 12%;
+}
+
+.one {
+  transition: 0.4s;
+  transform: translateX(-60%);
+}
+
+.two {
+  transition: 0.5s;
+  transform: translateX(-30%);
+}
+
+.cta:hover .three {
+  animation: color_anim 1s infinite 0.2s;
+}
+
+.cta:hover .one {
+  transform: translateX(0%);
+  animation: color_anim 1s infinite 0.6s;
+}
+
+.cta:hover .two {
+  transform: translateX(0%);
+  animation: color_anim 1s infinite 0.4s;
+}
+
+@keyframes color_anim {
+  0% {
+    fill: white;
+  }
+
+  50% {
+    fill: var(--dark);
+  }
+
+  100% {
+    fill: white;
+  }
+}
